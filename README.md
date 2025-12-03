@@ -1,4 +1,4 @@
- Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto implementa un encriptador y desencriptador utilizando el Cifrado Hill con una matriz clave de tamaño 2×2.
 El sistema permite:
@@ -15,8 +15,8 @@ Visualizar todo de manera interactiva mediante una interfaz gráfica en HTML, CS
 
 Este cifrado se basa en álgebra lineal y operaciones módulo 26, asignando un valor numérico a cada letra.
 
- Instrucciones de Uso
-1. Abrir el proyecto
+ ## Instrucciones de Uso
+### 1. Abrir el proyecto
 
 Abre el archivo:
 
@@ -25,7 +25,7 @@ index.html
 
 Este cargará la aplicación completa en tu navegador.
 
-2. Encriptar
+### 2. Encriptar
 
 Escribe un mensaje (máx. 30 caracteres).
 
@@ -35,32 +35,35 @@ Ingresa la matriz clave 2×2:
 | c  d |
 
 
-Haz clic en Encriptar.
+
+### 3. Haz clic en **Encriptar**.
 
 El sistema mostrará:
 
-La matriz del mensaje.
+- La matriz generada del mensaje.
+- El texto encriptado.
 
-El texto encriptado.
+---
 
-3. Desencriptar
+### 4. 🔓 Desencriptar
 
-Usa la misma clave.
-
-Haz clic en Desencriptar.
+1. Usa la misma clave.
+2. Haz clic en **Desencriptar**.
 
 El sistema:
 
-Calculará la matriz inversa módulo 26.
+- Calcula la matriz inversa módulo 26.
+- Recupera el mensaje original si la clave es válida.
+- Muestra un error si la matriz **NO es invertible**.
 
-Recuperará el mensaje original si la clave es válida.
+---
 
-Mostrará un error si la matriz NO es invertible.
+## 🧮 Matemáticas del Cifrado Hill
 
- Matemáticas del Cifrado Hill
-1. Representación del alfabeto
-
+### 1. Representación del alfabeto  
 Cada letra se convierte en un número:
+
+
 
 A = 0
 B = 1
@@ -68,10 +71,12 @@ C = 2
 ...
 Z = 25
 
-Se eliminan espacios, acentos y caracteres especiales.
 
-2. Matriz del mensaje
+Se eliminan espacios, acentos y símbolos.
 
+---
+
+### 2. Matriz del mensaje  
 El texto se agrupa en pares:
 
 Ejemplo:
@@ -101,28 +106,26 @@ Condición necesaria:
 gcd(det(K), 26) = 1
 
 
-Si no se cumple, NO se puede desencriptar.
+Si no se cumple → **NO se puede desencriptar**.
 
-4. Encriptación
+---
 
-Operación matemática:
+### 4. 🔐 Encriptación
 
+Fórmula:
 C = K × M  mod 26
-
 
 Donde:
 
-K = matriz clave
+- **K** = matriz clave  
+- **M** = pares del mensaje  
+- **C** = texto cifrado  
 
-M = matriz del mensaje
+---
 
-C = matriz encriptada
-
-5. Matriz inversa para desencriptar
+### 5. 🔍 Matriz inversa para desencriptar
 
 Para recuperar el mensaje:
-
-M = K⁻¹ × C   mod 26
 
 
 Pasos:
@@ -145,29 +148,37 @@ K⁻¹ = det⁻¹ × |  d  -b |
 
 Multiplicar K⁻¹ con C.
 
- Personalización Realizada (Frontend)
 
-El proyecto incluye una interfaz completamente estilizada con:
+---
 
-Fondo animado multicolor estilo neón.
+## 🎨 Personalización Realizada (Frontend)
 
-Contenedor translúcido tipo glassmorphism.
+El proyecto incluye una interfaz con:
 
-Botones con efectos de iluminación.
+- Fondo animado multicolor estilo **neón**.
+- Contenedor translúcido **glassmorphism**.
+- Botones con efectos luminosos.
+- Inputs y textareas con glow dinámico.
+- Animaciones suaves y aspecto futurista.
 
-Textareas, inputs y cuadros con glow dinámico.
+Todos los estilos se encuentran en **style.css**.
 
-Animaciones suaves y diseño futurista.
+---
 
-Todo esto se implementa en style.css.
+## 📁 Archivos del Proyecto
 
- Archivos del Proyecto
-Archivo	Descripción
-index.html	Interfaz gráfica del sistema
-style.css	Estilos visuales con efectos neon y animaciones
-script.js	Lógica del cifrado Hill y desencriptación
-README.md	Documentación completa del proyecto
- Ejemplo de Funcionamiento
+| Archivo      | Descripción |
+|--------------|-------------|
+| `index.html` | Interfaz principal del sistema |
+| `style.css`  | Estilos visuales con efectos neon y animaciones |
+| `script.js`  | Lógica del cifrado Hill y desencriptación |
+| `README.md`  | Documentación del proyecto |
+
+---
+
+## 🧪 Ejemplo de Funcionamiento
+
+### Clave:
 
 Clave:
 
